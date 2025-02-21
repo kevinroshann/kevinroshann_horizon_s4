@@ -25,14 +25,14 @@ def find_nearest_neighbor(points):
 def get_user_points():
     points = []
     while True:
-        user_input = input("Enter a point (x, y) or type 'done' to finish: ")
+        user_input = input("Enter a point (x, y) and type 'done' to finish: ")
         if user_input.lower() == 'done':
             break
         try:
             x, y = map(float, user_input.split(','))
             points.append((x, y))
         except:
-            print("Invalid input. Please enter coordinates in the format 'x, y'.")
+            print("Invalid input. Please enter points in format 'x, y'.")
     return points
 
 # Function to plot points and lines
@@ -48,7 +48,7 @@ def plot_points_and_lines(points, lines):
    
     plt.xlabel('X')
     plt.ylabel('Y')
-    plt.title('Points Connected to Nearest Neighbor')
+    plt.title('Plot')
     plt.legend()
     plt.grid(True)
     plt.show()
