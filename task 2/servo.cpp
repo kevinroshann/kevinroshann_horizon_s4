@@ -1,11 +1,11 @@
 #include <Servo.h>
 
 Servo servos[6];
-int initialangles[6] = {90, 90, 90, 90, 90, 90}; 
+int initialangles[6] = {90,90, 90,90, 90, 90}; 
 int targetAngles[6];
 
 void setup() {
-    int servoPins[6] = {3, 5, 6, 9, 10, 11};
+    int servoPins[6] = {3,5,6,9,10, 11};
     for (int i = 0; i < 6; i++) {
         servos[i].attach(servoPins[i]);
         servos[i].write(initialangles[i]);
